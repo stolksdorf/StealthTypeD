@@ -1,0 +1,24 @@
+<metadata>
+	<title><![CDATA[ Stealth Type D ]]></title>
+
+	<!--
+		This mod's thread on ftlgame.com.
+		If there's no thread yet, create one to announce your upcoming mod in
+		the 'Mod Development' forum. Then paste the url here.
+	-->
+	<threadUrl><![CDATA[ https://github.com/stolksdorf/StealthTypeD ]]></threadUrl>
+	<author><![CDATA[ stolksdorf ]]></author>
+	<version><![CDATA[ 0.1 ]]></version>
+
+
+	<description>
+<![CDATA[
+Developed to replace the Stealth Type C, seeing as it's not even have cloak.
+
+The Stealth type D focuses on draining the life support of the enemies ship through breaches and hacking.
+
+Replaces Stealth Type C
+]]>
+	</description>
+
+</metadata>
