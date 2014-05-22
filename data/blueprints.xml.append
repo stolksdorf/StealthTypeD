@@ -1,50 +1,109 @@
-<shipBlueprint name="PLAYER_SHIP_STEALTH" layout="stealth" img="stealth">
-	<class>Stealth Cruiser</class>
-	<name>The Test</name>
-	<unlock>Complete 2/3 of the Stealth Cruiser Achievements to unlock this ship.</unlock>
-	<desc>Designed as a joint venture betwen the Federation and the Lanius.</desc>
-	<systemList>
-		<pilot power="1" room="0" start="true"/>
-		<doors power="1" room="14" start="true" img="room_doors_2">
-			<slot>
-				<direction>down</direction>
-				<number>0</number>
-			</slot>
-		</doors>
-		<sensors power="2" room="13" start="true" img="room_sensors_2">
-			<slot>
-				<direction>up</direction>
-				<number>0</number>
-			</slot>
-		</sensors>
-		<oxygen power="1" room="1" start="true" img="room_oxygen_2"/>
-		<engines power="4" room="12" start="true" img="room_engines_2"/>
-		<shields power="2" room="10" start="false"img="room_shields_2"/>
-		<weapons power="2" room="3" start="true" img="room_weapons_2"/>
-		<drones power="2" room="11" start="false" img="room_drones_2"/>
-		<medbay power="1" room="7" start="false"/>
-		<clonebay power="1" room="7" start="true"/>
-		<teleporter power="1" room="5" start="false"/>
-		<cloaking power="1" room="8" start="true" img="room_cloaking_2"/>
-		<hacking power="3" room="6" start="true" img="room_hacking">
-			<slot>
-				<direction>down</direction>
-				<number>0</number>
-			</slot>
-		</hacking>
-		<battery power="1" room="4" start="false"/>
-		<mind power="1" room="9" start="false" img="room_mind_2"/>
-	</systemList>
-	<weaponList count="2" missiles="20">
-		<weapon name="BOMB_BREACH_1"/>
-		<weapon name="BOMB_FIRE"/>
-	</weaponList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<aug name="ADV_SCANNERS"/>
-	<droneList count="0" drones="20"/>
-	<health amount="30"/>
-	<maxPower amount ="19"/>
-	<crewCount amount = "1" class="human"/>
-	<crewCount amount = "1" class="engi"/>
-</shipBlueprint>
+<weaponBlueprint name="SWISS_CHEESE">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>Swiss Cheese</title>
+	<tip>tip_flak</tip>
+	<short>Swiss Cheese</short>
+	<desc>Fires a blast of debris across a random area doing up to 3 damage. Good at taking down shields but hard to aim.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
+	<radius>80</radius>
+	<damage>0</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>8</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>65</cost>
+	<bp>10</bp>
+	<speed>40</speed>
+	<rarity>1</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+
+
+<!-- Breach Beam -->
+<weaponBlueprint name="BEAM_BEACH">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Breach Beam</title>
+	<short>Breach Beam</short>
+	<desc>This terrifying beam does no physical damage, but punches holes in ships.</desc>
+	<tooltip>Beam weapon that causes breaches.</tooltip>
+	<damage>0</damage>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>9</breachChance>
+	<cooldown>17</cooldown>
+	<power>1</power>
+	<cost>65</cost>
+	<bp>7</bp>
+	<rarity>2</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_2</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- Logic Bomb -->
+<weaponBlueprint name="BOMB_LOGIC">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>Logic Bomb</title>
+	<short>L. Bomb</short>
+	<locked>1</locked>
+	<desc>A computer program designed to disable systems through ion damage. Penetrates shields.</desc>
+	<tooltip>Does no damage but deals 1 ion damage. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>6</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_ion</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_ion</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+
